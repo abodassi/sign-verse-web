@@ -29,14 +29,14 @@ function App() {
           <div className="stars"></div>
           <div className="hero-content">
             <div className="logo-container">
-              <img src="/images/logo-01.png" alt="SignVerse Logo" className="logo" />
+              <img src="/images/logo-01.webp" alt="SignVerse Logo" className="logo" />
             </div>
             <h1 className="headline">{t.hero.headline}</h1>
             <p className="subheadline">{t.hero.subheadline}</p>
             
             <div className="download-group">
               <a href="/downloads/SignVerse.apk" download="SignVerse.apk" className="btn btn-primary">
-                <img src="/images/apk.jpg" alt="Android" style={{ borderRadius: '50%' }} />
+                <img src="/images/apk.webp" alt="Android" style={{ borderRadius: '50%' }} />
                 {t.hero.downloadAndroid}
               </a>
               <a href="/downloads/SignVerse.zip" download="SignVerse.zip" className="btn btn-secondary">
@@ -54,15 +54,13 @@ function App() {
 
         {/* Rana & Rayan Section */}
         <section className="scroll-section characters-section bg-purple snap-center">
-          <div className="section-content flex-row">
-            <div className="text-content">
+          <div className="rr-layout">
+            <img src="/images/Untitled-1-05.webp" alt="Rana" className="char-img float-anim rr-char" />
+            <div className="text-content text-center rr-text">
               <h2 className="char-name">{t.characters.ranaRayan.name}</h2>
               <p className="char-desc">{t.characters.ranaRayan.description}</p>
             </div>
-            <div className="image-content duo-images">
-              <img src="/images/Untitled-1-05.png" alt="Rana" className="char-img float-anim" />
-              <img src="/images/Untitled-1-06.png" alt="Rayan" className="char-img float-anim-delayed" />
-            </div>
+            <img src="/images/Untitled-1-06.webp" alt="Rayan" className="char-img float-anim-delayed rr-char" />
           </div>
         </section>
 
@@ -74,34 +72,41 @@ function App() {
               <p className="char-desc">{t.characters.musleh.description}</p>
             </div>
             <div className="image-content">
-              <img src="/images/Untitled-1-08.png" alt="Musleh" className="char-img float-anim large" />
+              <img src="/images/Untitled-1-08.webp" alt="Musleh" className="char-img float-anim musleh-img" />
             </div>
           </div>
         </section>
 
         {/* Wijdan Sisters Section */}
         <section className="scroll-section characters-section bg-dark snap-center">
-          <div className="section-content flex-row align-start wijdan-layout">
-            <div className="text-content wijdan-text">
+          <div className="wijdan-scene">
+            {/* Left sisters */}
+            <div className="wijdan-col">
+              <div className="wijdan-char-wrap red">
+                <img src="/images/Untitled-1-01.webp" alt="Anger" className="char-img float-anim wijdan-char" />
+                <span className="emotion-label">{t.characters.wijdan.red.name}</span>
+              </div>
+              <div className="wijdan-char-wrap blue">
+                <img src="/images/Untitled-1-02.webp" alt="Happiness" className="char-img float-anim-delayed wijdan-char" />
+                <span className="emotion-label">{t.characters.wijdan.blue.name}</span>
+              </div>
+            </div>
+
+            {/* Center text */}
+            <div className="wijdan-center-text">
               <h2 className="char-name mega">{t.characters.wijdan.title}</h2>
               <p className="char-desc">{t.characters.wijdan.description}</p>
             </div>
-            <div className="image-content wijdan-grid">
-              <div className="wijdan-card red">
-                <img src="/images/Untitled-1-01.png" alt="Red - Anger" className="char-img" />
-                <div className="emotion-label">{t.characters.wijdan.red.name}</div>
+
+            {/* Right sisters */}
+            <div className="wijdan-col">
+              <div className="wijdan-char-wrap green">
+                <img src="/images/Untitled-1-04.webp" alt="Surprise" className="char-img float-anim wijdan-char" />
+                <span className="emotion-label">{t.characters.wijdan.green.name}</span>
               </div>
-              <div className="wijdan-card blue">
-                <img src="/images/Untitled-1-02.png" alt="Blue - Happiness" className="char-img" />
-                <div className="emotion-label">{t.characters.wijdan.blue.name}</div>
-              </div>
-              <div className="wijdan-card green">
-                <img src="/images/Untitled-1-04.png" alt="Green - Surprise" className="char-img" />
-                <div className="emotion-label">{t.characters.wijdan.green.name}</div>
-              </div>
-              <div className="wijdan-card purple">
-                <img src="/images/Untitled-1-03.png" alt="Purple - Sadness" className="char-img" />
-                <div className="emotion-label">{t.characters.wijdan.purple.name}</div>
+              <div className="wijdan-char-wrap purple">
+                <img src="/images/Untitled-1-03.webp" alt="Sadness" className="char-img float-anim-delayed wijdan-char" />
+                <span className="emotion-label">{t.characters.wijdan.purple.name}</span>
               </div>
             </div>
           </div>
@@ -109,9 +114,9 @@ function App() {
 
         {/* Siraj Section */}
         <section className="scroll-section characters-section bg-gold snap-center">
-          <div className="section-content flex-col center-text">
+          <div className="section-content flex-col center-text siraj-content">
             <div className="image-content">
-              <img src="/images/Untitled-1-07.png" alt="Siraj" className="char-img float-anim siraj-img" />
+              <img src="/images/Untitled-1-07.webp" alt="Siraj" className="char-img float-anim siraj-img" />
             </div>
             <div className="text-content text-center">
               <h2 className="char-name">{t.characters.siraj.name}</h2>
