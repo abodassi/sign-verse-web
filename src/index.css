@@ -77,6 +77,7 @@ html, body {
   height: 100vh;
   width: 100%;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   scrollbar-width: none;
@@ -595,17 +596,24 @@ html, body {
 /* ===== RESPONSIVE — MOBILE (≤768px) ===== */
 @media (max-width: 768px) {
   /* Switch from fixed-height snap sections to natural flow */
-  html, body, .app-container {
+  html, body {
     height: auto;
     min-height: 100%;
-    overflow: auto;
-    overscroll-behavior-y: none;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    overscroll-behavior-y: auto;
+  }
+
+  .app-container {
+    height: auto;
+    min-height: 100%;
+    overflow: visible !important;
   }
 
   .scroll-container {
     height: auto;
-    overflow-y: visible;
-    scroll-snap-type: none;
+    overflow-y: visible !important;
+    scroll-snap-type: none !important;
   }
 
   .scroll-section {
