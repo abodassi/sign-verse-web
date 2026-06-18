@@ -44,11 +44,11 @@ function App() {
                 {t.hero.downloadWindows}
               </a>
             </div>
-            
-            <div className="scroll-indicator">
-              <span>{t.hero.meetGuides}</span>
-              <div className="arrow-down"></div>
-            </div>
+          </div>
+
+          <div className="scroll-indicator">
+            <span>{t.hero.meetGuides}</span>
+            <div className="arrow-down"></div>
           </div>
         </section>
 
